@@ -3,153 +3,124 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Supermercado Moderno</title>
+    <title>Supermercado Online</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <style>
-        * {
+        body {
+            font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: 'Poppins', sans-serif;
-        }
-        body {
-            background-color: #f4f4f4;
-            color: #333;
         }
         header {
-            background-color: #2ecc71;
+            background: #4CAF50;
             color: white;
-            padding: 1.5rem;
             text-align: center;
-            font-size: 1.5rem;
-            font-weight: bold;
+            padding: 1rem;
         }
         nav ul {
             list-style: none;
             display: flex;
             justify-content: center;
-            gap: 1.5rem;
-            padding: 1rem;
-            background-color: #27ae60;
+            padding: 0;
+            background: #333;
         }
-        nav a {
+        nav ul li {
+            margin: 0 10px;
+        }
+        nav ul li a {
             color: white;
             text-decoration: none;
-            font-weight: bold;
-            transition: color 0.3s;
+            padding: 10px 15px;
+            display: block;
         }
-        nav a:hover {
-            color: #f4d03f;
-        }
-        .hero {
-            background: url('supermercado.jpg') no-repeat center/cover;
-            color: white;
-            text-align: center;
-            padding: 6rem 1rem;
-            font-size: 1.8rem;
-            font-weight: bold;
+        main {
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
         }
         .categoria {
-            text-align: center;
-            margin-top: 2rem;
-            font-size: 1.5rem;
-            color: #27ae60;
-            font-weight: bold;
+            width: 80%;
+            margin-bottom: 40px;
         }
-        .grid {
-            display: none;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 2rem;
-            padding: 2rem;
+        .productos {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 20px;
         }
         .producto {
-            background: white;
-            padding: 1rem;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-            transition: transform 0.3s;
+            border: 1px solid #ddd;
+            padding: 10px;
             text-align: center;
-        }
-        .producto:hover {
-            transform: translateY(-5px);
+            border-radius: 10px;
+            box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
         }
         .producto img {
-            width: 100%;
-            border-radius: 8px;
-        }
-        .producto h3 {
-            margin-top: 1rem;
-            color: #27ae60;
-        }
-        .btn {
-            display: block;
-            margin: 1rem auto;
-            padding: 0.7rem 1.5rem;
-            background: #27ae60;
-            color: white;
-            text-decoration: none;
-            border-radius: 5px;
-            transition: background 0.3s;
-            text-align: center;
-            cursor: pointer;
-        }
-        .btn:hover {
-            background: #219150;
+            max-width: 100%;
+            border-radius: 10px;
         }
         footer {
-            background-color: #222;
+            background: #222;
             color: white;
             text-align: center;
-            padding: 1.5rem;
-            margin-top: 3rem;
-            font-size: 1.2rem;
+            padding: 20px;
+            margin-top: 20px;
+        }
+        .redes a {
+            color: white;
+            margin: 0 10px;
+            font-size: 20px;
+            text-decoration: none;
         }
     </style>
-    <script>
-        function mostrarProductos(id) {
-            let categoria = document.getElementById(id);
-            categoria.style.display = (categoria.style.display === "grid") ? "none" : "grid";
-        }
-    </script>
 </head>
 <body>
     <header>
-        Supermercado Moderno
+        <h1>Supermercado Online</h1>
+        <nav>
+            <ul>
+                <li><a href="#lacteos">Lácteos</a></li>
+                <li><a href="#carnes">Carnes</a></li>
+                <li><a href="#bebidas">Bebidas</a></li>
+                <li><a href="#abarrotes">Abarrotes</a></li>
+                <li><a href="#frutas">Frutas</a></li>
+                <li><a href="#verduras">Verduras</a></li>
+                <li><a href="#panaderia">Panadería</a></li>
+                <li><a href="#limpieza">Limpieza</a></li>
+                <li><a href="#cuidado-personal">Cuidado Personal</a></li>
+                <li><a href="#congelados">Congelados</a></li>
+            </ul>
+        </nav>
     </header>
-    <nav>
-        <ul>
-            <li><a href="#inicio">Inicio</a></li>
-            <li><a href="#productos">Productos</a></li>
-            <li><a href="#ofertas">Ofertas</a></li>
-            <li><a href="#contacto">Contacto</a></li>
-        </ul>
-    </nav>
     
     <main>
-        <section id="inicio" class="hero">
-            <h2>Bienvenido a tu supermercado de confianza</h2>
-            <p>Los mejores productos al mejor precio, todos los días.</p>
-        </section>
-
-        <section id="productos" class="productos">
-            <h2 class="categoria">Frutas</h2>
-            <button class="btn" onclick="mostrarProductos('frutas')">Ver más</button>
-            <div id="frutas" class="grid">
-                <article class="producto"><img src="manzana.jpg" alt="Manzana"><h3>Manzana</h3></article>
-                <article class="producto"><img src="banana.jpg" alt="Banana"><h3>Banana</h3></article>
-                <article class="producto"><img src="naranja.jpg" alt="Naranja"><h3>Naranja</h3></article>
-                <article class="producto"><img src="pera.jpg" alt="Pera"><h3>Pera</h3></article>
-                <article class="producto"><img src="uva.jpg" alt="Uva"><h3>Uva</h3></article>
-                <article class="producto"><img src="mango.jpg" alt="Mango"><h3>Mango</h3></article>
-                <article class="producto"><img src="kiwi.jpg" alt="Kiwi"><h3>Kiwi</h3></article>
-                <article class="producto"><img src="melon.jpg" alt="Melón"><h3>Melón</h3></article>
-                <article class="producto"><img src="sandia.jpg" alt="Sandía"><h3>Sandía</h3></article>
-                <article class="producto"><img src="fresa.jpg" alt="Fresa"><h3>Fresa</h3></article>
+        <section id="productos">
+            <!-- Categorías de productos -->
+            <div class="categoria" id="lacteos">
+                <h2>Lácteos</h2>
+                <div class="productos">
+                    <!-- Ejemplo de producto -->
+                    <div class="producto">
+                        <img src="img/leche.jpg" alt="Leche Entera">
+                        <h3>Leche Entera</h3>
+                        <p>$5.000</p>
+                    </div>
+                    <!-- Repite este bloque para 20 productos -->
+                </div>
             </div>
+            <!-- Repite esta estructura para las otras 9 categorías -->
         </section>
     </main>
     
-    <footer id="contacto">
-        <p>Contacto: supermercado@correo.com | Tel: 123-456-7890</p>
+    <footer>
+        <p>&copy; 2025 Supermercado Online</p>
+        <div class="redes">
+            <a href="#" class="facebook"><i class="fab fa-facebook"></i></a>
+            <a href="#" class="instagram"><i class="fab fa-instagram"></i></a>
+            <a href="#" class="whatsapp"><i class="fab fa-whatsapp"></i></a>
+        </div>
     </footer>
 </body>
 </html>
