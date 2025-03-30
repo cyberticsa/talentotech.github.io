@@ -8,7 +8,7 @@ body {
 }
   /* El header se estiliza para tener un fondo naranja y texto centrado */
 header {
-    background: black; /* Se establece el color de fondo del header */
+    background: grey; /* Se establece el color de fondo del header */
     color: white; /* Se define el color del texto dentro del header */
     text-align: center; /* Se centra el texto horizontalmente en el header */
     padding: 1rem; /* Se agrega padding interno al header */
@@ -21,7 +21,7 @@ nav ul {
     flex-wrap: wrap; /* Se permite que los elementos se envuelvan en múltiples líneas si es necesario */
     justify-content: center; /* Se centra horizontalmente el contenido de la lista */
     padding: 0; /* Se elimina el padding predeterminado de la lista */
-    background: #ff8f00; /* Se define el color de fondo del menú de navegación */
+    background: black; /* Se define el color de fondo del menú de navegación */
 }
   /* Cada elemento li dentro del menú de navegación recibe un margen */
 nav ul li {
