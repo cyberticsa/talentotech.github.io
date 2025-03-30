@@ -103,3 +103,20 @@ footer {
     font-size: 20px; /* Se establece el tamaño de fuente de los íconos en 20px */
     text-decoration: none; /* Se elimina el subrayado de los enlaces */
 }
+
+/ *Diseño responsivo con Media Queries */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column; /* Cambia el menú a una disposición vertical */
+        align-items: center;
+    }
+
+    .productos {
+        flex-wrap: wrap; /* Permite que los productos se acomoden en varias líneas en pantallas pequeñas */
+        justify-content: center;
+    }
+
+    .producto {
+        width: 100%; /* Hace que cada producto ocupe todo el ancho disponible */
+    }
+}
