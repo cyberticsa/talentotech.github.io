@@ -18,6 +18,8 @@ header {
     left: 0;         /* Se posiciona al inicio del eje horizontal */
     width: 100%;     /* Se extiende a lo ancho de la pantalla */
     z-index: 1000;   /* Se asegura que el header se muestre por encima de otros elementos */
+    height: 50px; /* Establece la altura fija del header */
+    line-height: 50px; /* Se asegura que el texto esté centrado verticalmente */
 }
   /* Se configura el menú de navegación (ul dentro de nav) */
 nav ul {
