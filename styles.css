@@ -1,93 +1,105 @@
-<style>
-    body {
-      font-family: 'Poppins', sans-serif;
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      background: #f8f9fa;
-    }
-    header {
-      background: #ff6f00;
-      color: white;
-      text-align: center;
-      padding: 1rem;
-      font-size: 1.5rem;
-    }
-    nav ul {
-      list-style: none;
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      padding: 0;
-      background: #ff8f00;
-    }
-    nav ul li {
-      margin: 5px;
-    }
-    nav ul li a {
-      color: white;
-      text-decoration: none;
-      padding: 10px 15px;
-      display: block;
-      font-weight: bold;
-      transition: background 0.3s;
-    }
-    nav ul li a:hover {
-      background: #ffb74d;
-      border-radius: 5px;
-    }
-    main {
-      padding: 20px;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-    }
-    .categoria {
-      width: 90%;
-      margin-bottom: 40px;
-    }
-    .categoria h2 {
-      margin-bottom: 10px;
-    }
-    /* Los productos se muestran en una línea horizontal sin wrap */
-    .productos {
-      display: flex;
-      flex-wrap: nowrap;
-      overflow-x: auto;
-      gap: 20px;
-      padding-bottom: 10px;
-    }
-    .producto {
-      flex: 0 0 auto;
-      width: 200px;
-      border: 1px solid #ddd;
-      padding: 15px;
-      text-align: center;
-      border-radius: 10px;
-      box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
-      background: white;
-      transition: transform 0.3s;
-    }
-    .producto:hover {
-      transform: scale(1.05);
-    }
-    .producto img {
-      max-width: 100%;
-      border-radius: 10px;
-      height: 150px;
-      object-fit: cover;
-    }
-    footer {
-      background: #222;
-      color: white;
-      text-align: center;
-      padding: 20px;
-      margin-top: 20px;
-    }
-    .redes a {
-      color: white;
-      margin: 0 10px;
-      font-size: 20px;
-      text-decoration: none;
-    }
-  </style>
+/* El body se configura para establecer los estilos generales de la página */
+body {
+    font-family: 'Poppins', sans-serif; /* Se define la familia de fuente, usando 'Poppins' y una fuente de reserva sans-serif */
+    margin: 0; /* Se elimina el margen predeterminado del body */
+    padding: 0; /* Se elimina el padding predeterminado del body */
+    box-sizing: border-box; /* Se configura el box-sizing para incluir el padding y el borde en el cálculo del ancho */
+    background: #f8f9fa; /* Se define el color de fondo del body */
+}
+  /* El header se estiliza para tener un fondo naranja y texto centrado */
+header {
+    background: #ff6f00; /* Se establece el color de fondo del header */
+    color: white; /* Se define el color del texto dentro del header */
+    text-align: center; /* Se centra el texto horizontalmente en el header */
+    padding: 1rem; /* Se agrega padding interno al header */
+    font-size: 1.5rem; /* Se define el tamaño de fuente del header */
+}
+  /* Se configura el menú de navegación (ul dentro de nav) */
+nav ul {
+    list-style: none; /* Se eliminan las viñetas de la lista */
+    display: flex; /* Se establece el contenedor como flexible */
+    flex-wrap: wrap; /* Se permite que los elementos se envuelvan en múltiples líneas si es necesario */
+    justify-content: center; /* Se centra horizontalmente el contenido de la lista */
+    padding: 0; /* Se elimina el padding predeterminado de la lista */
+    background: #ff8f00; /* Se define el color de fondo del menú de navegación */
+}
+  /* Cada elemento li dentro del menú de navegación recibe un margen */
+nav ul li {
+    margin: 5px; /* Se asigna un margen de 5px a cada li */
+}
+  /* Se configura el estilo para los enlaces dentro del menú de navegación */
+nav ul li a {
+    color: white; /* Se establece el color del texto de los enlaces */
+    text-decoration: none; /* Se elimina el subrayado predeterminado de los enlaces */
+    padding: 10px 15px; /* Se agrega padding a los enlaces para mayor espacio */
+    display: block; /* Se hace que cada enlace se comporte como un bloque */
+    font-weight: bold; /* Se define que el texto de los enlaces sea negrita */
+    transition: background 0.3s; /* Se añade una transición suave al cambiar el fondo */
+}
+  /* Se define el efecto hover para los enlaces del menú */
+nav ul li a:hover {
+    background: #ffb74d; /* Se cambia el fondo del enlace al pasar el cursor */
+    border-radius: 5px; /* Se redondean las esquinas del enlace durante el hover */
+}
+  /* El main se estiliza para centrar su contenido y disponerlo en columna */
+main {
+    padding: 20px; /* Se agrega padding interno al main */
+    display: flex; /* Se establece main como contenedor flexible */
+    flex-direction: column; /* Se organiza el contenido en una columna */
+    align-items: center; /* Se centra horizontalmente el contenido dentro del main */
+}
+  /* La clase "categoria" se utiliza para estilizar cada sección de productos */
+.categoria {
+    width: 90%; /* Se establece un ancho del 90% para cada categoría */
+    margin-bottom: 40px; /* Se agrega un margen inferior para separar las categorías */
+}
+  /* Se define un margen inferior para el título (h2) dentro de cada categoría */
+.categoria h2 {
+    margin-bottom: 10px; /* Se asigna un margen inferior de 10px al título */
+}
+  /* Los productos se muestran en una línea horizontal sin que se envuelvan */
+.productos {
+    display: flex; /* Se utiliza flexbox para organizar los productos */
+    flex-wrap: nowrap; /* Se evita que los productos se distribuyan en varias líneas */
+    overflow-x: auto; /* Se permite el desplazamiento horizontal si hay más productos de los que caben */
+    gap: 20px; /* Se define un espacio de 20px entre cada producto */
+    padding-bottom: 10px; /* Se agrega padding inferior para mejorar la visualización del scroll */
+}
+  /* Cada producto se presenta como una tarjeta con ancho fijo y estilos definidos */
+.producto {
+    flex: 0 0 auto; /* Se evita que el producto se expanda, manteniendo un tamaño fijo */
+    width: 200px; /* Se asigna un ancho fijo de 200px a cada producto */
+    border: 1px solid #ddd; /* Se agrega un borde gris claro al producto */
+    padding: 15px; /* Se añade padding interno al producto */
+    text-align: center; /* Se centra el texto dentro de la tarjeta del producto */
+    border-radius: 10px; /* Se redondean las esquinas del producto */
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1); /* Se aplica una sombra sutil para dar profundidad */
+    background: white; /* Se define un fondo blanco para el producto */
+    transition: transform 0.3s; /* Se añade una transición para el efecto de hover en el producto */
+}
+  /* Se define el efecto hover para cada producto, aumentando su tamaño ligeramente */
+.producto:hover {
+    transform: scale(1.05); /* Se aumenta la escala del producto al pasar el cursor */
+}
+  /* Las imágenes dentro de cada producto se ajustan al contenedor y se recortan adecuadamente */
+.producto img {
+    max-width: 100%; /* Se asegura que la imagen no exceda el ancho del contenedor */
+    border-radius: 10px; /* Se redondean las esquinas de la imagen */
+    height: 150px; /* Se establece una altura fija de 150px para la imagen */
+    object-fit: cover; /* Se hace que la imagen se recorte para llenar el contenedor sin distorsión */
+}
+  /* El footer se estiliza para tener un fondo oscuro, texto centrado y separación superior */
+footer {
+    background: #222; /* Se define el color de fondo del footer */
+    color: white; /* Se establece el color del texto en el footer */
+    text-align: center; /* Se centra el texto horizontalmente en el footer */
+    padding: 20px; /* Se añade padding interno al footer */
+    margin-top: 20px; /* Se agrega un margen superior para separar el footer del contenido */
+}
+  /* Se configuran los estilos para los enlaces de redes sociales dentro del footer */
+.redes a {
+    color: white; /* Se define el color del texto de los enlaces de redes sociales */
+    margin: 0 10px; /* Se asigna un margen horizontal de 10px a cada enlace */
+    font-size: 20px; /* Se establece el tamaño de fuente de los íconos en 20px */
+    text-decoration: none; /* Se elimina el subrayado de los enlaces */
+}
