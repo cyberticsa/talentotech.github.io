@@ -11,7 +11,7 @@ header {
     background: grey; /* Se establece el color de fondo del header */
     color: white; /* Se define el color del texto dentro del header */
     text-align: center; /* Se centra el texto horizontalmente en el header */
-    padding: 1rem; /* Se agrega padding interno al header */
+    padding: 10px; /* Se agrega padding interno al header */
     font-size: 1.5rem; /* Se define el tamaño de fuente del header */
 }
   /* Se configura el menú de navegación (ul dentro de nav) */
