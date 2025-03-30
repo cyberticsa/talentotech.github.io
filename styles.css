@@ -8,7 +8,7 @@ body {
 }
   /* El header se estiliza para tener un fondo naranja y texto centrado */
 header {
-    background: #ff6f00; /* Se establece el color de fondo del header */
+    background: black; /* Se establece el color de fondo del header */
     color: white; /* Se define el color del texto dentro del header */
     text-align: center; /* Se centra el texto horizontalmente en el header */
     padding: 1rem; /* Se agrega padding interno al header */
