@@ -52,6 +52,7 @@ main {
     display: flex; /* Se establece main como contenedor flexible */
     flex-direction: column; /* Se organiza el contenido en una columna */
     align-items: center; /* Se centra horizontalmente el contenido dentro del main */
+    padding-top: 70px; /* Se ajusta este valor según la altura del header */
 }
   /* La clase "categoria" se utiliza para estilizar cada sección de productos */
 .categoria {
