@@ -1,3 +1,116 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Supermercado Moderno</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+        body {
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        header {
+            background-color: #2ecc71;
+            color: white;
+            padding: 1.5rem;
+            text-align: center;
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+            padding: 1rem;
+            background-color: #27ae60;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+        nav a:hover {
+            color: #f4d03f;
+        }
+        .hero {
+            background: url('supermercado.jpg') no-repeat center/cover;
+            color: white;
+            text-align: center;
+            padding: 6rem 1rem;
+            font-size: 1.8rem;
+            font-weight: bold;
+        }
+        .categoria {
+            text-align: center;
+            margin-top: 2rem;
+            font-size: 1.5rem;
+            color: #27ae60;
+            font-weight: bold;
+        }
+        .grid {
+            display: none;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            padding: 2rem;
+        }
+        .producto {
+            background: white;
+            padding: 1rem;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+            text-align: center;
+        }
+        .producto:hover {
+            transform: translateY(-5px);
+        }
+        .producto img {
+            width: 100%;
+            border-radius: 8px;
+        }
+        .producto h3 {
+            margin-top: 1rem;
+            color: #27ae60;
+        }
+        .btn {
+            display: block;
+            margin: 1rem auto;
+            padding: 0.7rem 1.5rem;
+            background: #27ae60;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background 0.3s;
+            text-align: center;
+            cursor: pointer;
+        }
+        .btn:hover {
+            background: #219150;
+        }
+        footer {
+            background-color: #222;
+            color: white;
+            text-align: center;
+            padding: 1.5rem;
+            margin-top: 3rem;
+            font-size: 1.2rem;
+        }
+    </style>
+    <script>
+        function mostrarProductos(id) {
+            let categoria = document.getElementById(id);
+            categoria.style.display = (categoria.style.display === "grid") ? "none" : "grid";
+        }
+    </script>
+</head>
 <body>
     <header>
         Supermercado Moderno
@@ -19,7 +132,8 @@
 
         <section id="productos" class="productos">
             <h2 class="categoria">Frutas</h2>
-            <div class="grid">
+            <button class="btn" onclick="mostrarProductos('frutas')">Ver más</button>
+            <div id="frutas" class="grid">
                 <article class="producto"><img src="manzana.jpg" alt="Manzana"><h3>Manzana</h3></article>
                 <article class="producto"><img src="banana.jpg" alt="Banana"><h3>Banana</h3></article>
                 <article class="producto"><img src="naranja.jpg" alt="Naranja"><h3>Naranja</h3></article>
@@ -30,22 +144,6 @@
                 <article class="producto"><img src="melon.jpg" alt="Melón"><h3>Melón</h3></article>
                 <article class="producto"><img src="sandia.jpg" alt="Sandía"><h3>Sandía</h3></article>
                 <article class="producto"><img src="fresa.jpg" alt="Fresa"><h3>Fresa</h3></article>
-            </div>
-            
-            <h2 class="categoria">Lácteos</h2>
-            <div class="grid">
-                <article class="producto"><img src="leche.jpg" alt="Leche"><h3>Leche</h3></article>
-                <article class="producto"><img src="queso.jpg" alt="Queso"><h3>Queso</h3></article>
-                <article class="producto"><img src="yogur.jpg" alt="Yogur"><h3>Yogur</h3></article>
-                <article class="producto"><img src="mantequilla.jpg" alt="Mantequilla"><h3>Mantequilla</h3></article>
-                <article class="producto"><img src="crema.jpg" alt="Crema"><h3>Crema</h3></article>
-            </div>
-            
-            <h2 class="categoria">Carnes</h2>
-            <div class="grid">
-                <article class="producto"><img src="pollo.jpg" alt="Pollo"><h3>Pollo</h3></article>
-                <article class="producto"><img src="carne_res.jpg" alt="Carne de res"><h3>Carne de res</h3></article>
-                <article class="producto"><img src="cerdo.jpg" alt="Cerdo"><h3>Cerdo</h3></article>
             </div>
         </section>
     </main>
