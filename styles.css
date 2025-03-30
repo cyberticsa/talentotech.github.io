@@ -13,14 +13,6 @@ header {
     text-align: center; /* Se centra el texto horizontalmente en el header */
     padding: 5px; /* Se agrega padding interno al header */
     font-size: 1.1rem; /* Se define el tamaño de fuente del header */
-    position: fixed; /* Se fija el header en la pantalla */
-    top: 0;          /* Se posiciona en la parte superior */
-    left: 0;         /* Se posiciona al inicio del eje horizontal */
-    width: 100%;     /* Se extiende a lo ancho de la pantalla */
-    z-index: 1000;   /* Se asegura que el header se muestre por encima de otros elementos */
-    height: 50px; /* Establece la altura fija del header */
-    line-height: 50px; /* Se asegura que el texto esté centrado verticalmente */
-    margin-top: 60px;
 }
   /* Se configura el menú de navegación (ul dentro de nav) */
 nav ul {
@@ -55,7 +47,6 @@ main {
     display: flex; /* Se establece main como contenedor flexible */
     flex-direction: column; /* Se organiza el contenido en una columna */
     align-items: center; /* Se centra horizontalmente el contenido dentro del main */
-    padding-top: 60px; /* Se ajusta este valor según la altura del header */
 }
   /* La clase "categoria" se utiliza para estilizar cada sección de productos */
 .categoria {
