@@ -38,7 +38,7 @@ nav ul li a {
 }
   /* Se define el efecto hover para los enlaces del menú */
 nav ul li a:hover {
-    background: #ffb74d; /* Se cambia el fondo del enlace al pasar el cursor */
+    background: lightblue; /* Se cambia el fondo del enlace al pasar el cursor */
     border-radius: 5px; /* Se redondean las esquinas del enlace durante el hover */
 }
   /* El main se estiliza para centrar su contenido y disponerlo en columna */
